@@ -102,7 +102,7 @@ let dataArray;
 
 let order = [0, 1, 2];
 
-let nbParticles = 600;
+let nbParticles = 1000;
 let fftSize = 2048;
 
 let radius;
@@ -131,9 +131,9 @@ class Circle {
     }
 
     if (this.value !== this.cachedValue) {
-      this.xC = radius * (2 * this.xR) * Math.cos(this.index + this.i) + WIDTH / 2;
+      this.xC = radius * 3 * (2 * this.xR) * Math.cos(this.index + this.i) + WIDTH / 2;
       this.yC =
-      radius * (2 * this.yR) * Math.sin(this.index + this.i) + HEIGHT / 2;
+      radius * 3 * (2 * this.yR) * Math.sin(this.index + this.i) + HEIGHT / 2;
 
       this.p = (210 - this.value) * 0.5;
 
